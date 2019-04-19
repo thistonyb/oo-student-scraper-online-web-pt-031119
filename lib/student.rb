@@ -1,6 +1,7 @@
 class Student
   attr_accessor :name, :location, :twitter, :linkedin, :github, :blog, :profile_quote, :bio, :profile_url
   @@all = []
+
 #Takes in a hash argument and sets the student's attributes
 #using key/value pairs. Adds student instance to Class @@all array.
   def initialize(student_hash)

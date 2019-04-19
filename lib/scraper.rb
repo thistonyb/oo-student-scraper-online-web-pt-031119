@@ -39,5 +39,4 @@ class Scraper
     social_profiles[:bio] = doc.css(".description-holder p").text
     return social_profiles
   end
-
 end
