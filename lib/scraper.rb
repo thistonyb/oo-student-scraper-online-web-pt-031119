@@ -2,8 +2,8 @@ require 'open-uri'
 require 'pry'
 
 class Scraper
-#scrape_index_page is a Class method that scrapes the student index page
-#and returns an array of hashes where one hash represents one student's data.
+  #scrape_index_page is a Class method that scrapes the student index page
+  #and returns an array of hashes where one hash represents one student's data.
   def self.scrape_index_page(index_url)
     doc = Nokogiri::HTML(open(index_url))
     students = []
@@ -17,8 +17,9 @@ class Scraper
     end
     return students
   end
-#scrape_profile_page is a Class method that scrapes a student's profile
-#page and returns a hash of student social media attributes.
+
+  #scrape_profile_page is a Class method that scrapes a student's profile
+  #page and returns a hash of student social media attributes.
   def self.scrape_profile_page(profile_url)
     doc = Nokogiri::HTML(open(profile_url))
     social_profiles = {}
