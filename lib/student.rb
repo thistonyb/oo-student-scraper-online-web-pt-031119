@@ -7,7 +7,6 @@ class Student
 #using key/value pairs. Adds student instance to Class @@all array.
   def initialize(student_hash)
     self.name = student_hash[:name]
-    binding.pry
     self.location = student_hash[:location]
     self.profile_url = student_hash[:profile_url]
     @@all.push(self)
