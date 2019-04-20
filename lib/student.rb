@@ -3,17 +3,18 @@ class Student
   attr_accessor :name, :location, :twitter, :linkedin, :github, :blog, :profile_quote, :bio, :profile_url
   @@all = []
 
-#Takes in a hash argument and sets the student's attributes
-#using key/value pairs. Adds student instance to Class @@all array.
+  #Takes in a hash argument and sets the student's attributes
+  #using key/value pairs. Adds student instance to Class @@all array.
   def initialize(student_hash)
     self.name = student_hash[:name]
     self.location = student_hash[:location]
     self.profile_url = student_hash[:profile_url]
     @@all.push(self)
   end
-#Uses the Scraper Class' scrape_index_page method's array to
-#create a new students. Initialize method takes in a hash from the array
-#and sets name, location, and profile url.
+  
+  #Uses the Scraper Class' scrape_index_page method's array to
+  #create a new students. Initialize method takes in a hash from the array
+  #and sets name, location, and profile url.
   def self.create_from_collection(students_array)
     students_array.each do |student_info|
       Student.new(student_info)
