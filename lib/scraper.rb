@@ -17,7 +17,7 @@ class Scraper
     end
     return students
   end
-  
+
   #scrape_profile_page is a Class method that scrapes a student's profile
   #page and returns a hash of student social media attributes.
   def self.scrape_profile_page(profile_url)
