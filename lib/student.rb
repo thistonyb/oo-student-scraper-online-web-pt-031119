@@ -20,8 +20,9 @@ class Student
       Student.new(student_info)
     end
   end
-#Uses the Scraper Class' scrape_profile_page method hash to
-#set a Student instance's social media attributes.
+  
+  #Uses the Scraper Class' scrape_profile_page method hash to
+  #set a Student instance's social media attributes.
   def add_student_attributes(attributes_hash)
     self.twitter = attributes_hash[:twitter]
     self.linkedin = attributes_hash[:linkedin]
@@ -31,7 +32,8 @@ class Student
     self.profile_url = attributes_hash[:profile_url]
     self.profile_quote = attributes_hash[:profile_quote]
   end
-#Getter for all student instances.
+  
+  #Getter for all student instances.
   def self.all
     @@all
   end
