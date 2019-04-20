@@ -11,7 +11,7 @@ class Student
     self.profile_url = student_hash[:profile_url]
     @@all.push(self)
   end
-  
+
   #Uses the Scraper Class' scrape_index_page method's array to
   #create a new students. Initialize method takes in a hash from the array
   #and sets name, location, and profile url.
